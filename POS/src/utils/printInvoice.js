@@ -35,7 +35,7 @@ export async function printInvoice(
 		}
 
 		// Open PDF in new window - browser will handle print dialog
-		const printUrl = `/api/method/frappe.utils.print_format.download_pdf?${params.toString()}`
+		const printUrl = `/printview?${params.toString()}`
 		const printWindow = window.open(printUrl, "_blank", "width=800,height=600")
 
 		if (!printWindow) {
